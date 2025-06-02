@@ -26,7 +26,7 @@ function main(config, profileName) {
   const allProxies = [...new Set([...allDirectProxyNames, ...providerProxyNames])];
 
   // Create regex pattern to match unwanted nodes (GB, 重置, 到期)
-  const unstableNodePattern = /gb|重置|到期/i;
+  const unstableNodePattern = /gb|重置|到期|date|Days/i;
   
   // Filter proxies using regex test
   const stableProxies = allProxies.filter(proxyName => 
